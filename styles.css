@@ -16,10 +16,9 @@ body {
 
 .section-one {
   background-color: rgb(73, 69, 69);
-  height: 550px;
+  height: auto;
+  width: 100%;
   display: flex;
-  gap: 20px;
-  padding-left: 3rem;
 }
 
 .text-section-one {
@@ -41,9 +40,21 @@ body {
   font-size: 2.5rem;
 }
 
-.img-section-one {
+/* .img-section-one {
   object-fit: cover;
-  height: 55rem;
+  width: 100%;
+  max-height: 35rem;
+  margin-bottom: 0;
+  margin-left: 100px;
+  box-shadow: #393636ff 1px 1px 10px 1px;
+  border-top-left-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+} */
+
+.img1-div {
+  object-fit: cover;
+  width: 100%;
+  max-height: 45rem;
   margin-bottom: 0;
   margin-left: 100px;
   box-shadow: #393636ff 1px 1px 10px 1px;
@@ -62,7 +73,7 @@ body {
   background-color: rgb(73, 69, 69);
   width: 50%;
   color: white;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 5rem;
   border-radius: 1.2rem;
@@ -119,14 +130,19 @@ p {
 }
 
 .ordem-section-three {
-  color: #a97256ff;
   background: #393636ff;
   width: 5rem;
   height: 5rem;
-  font-size: 3rem;
+  font-size: 4rem;
   border-radius: 12px;
-  text-align: center;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 300ms ease-in-out;
+}
+
+.ordem-section-three:hover {
+  background: #a97256ff;
 }
 
 .font {
@@ -146,4 +162,33 @@ p {
 
 .shadow {
   box-shadow: #393636ff 2px 2px 2px 2px;
+}
+
+/* Barra de navegação */
+.navbar-top{
+  background-color: #333;
+  overflow: hidden;
+}
+
+.navbar-top ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navbar-top li {
+  float: left;
+}
+
+.navbar-top li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar-top li a:hover {
+  background-color: #111;
 }

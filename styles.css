@@ -26,7 +26,6 @@ body {
   margin-left: 50px;
   margin-top: 50px;
   font-size: 3rem;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text-titles {
@@ -50,6 +49,7 @@ body {
   border-top-left-radius: 1.2rem;
   border-bottom-left-radius: 1.2rem;
 } */
+
 
 .img1-div {
   object-fit: cover;
@@ -101,7 +101,7 @@ p {
 
 .text-section-three {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto, 1fr);
   place-items: center;
 
 }

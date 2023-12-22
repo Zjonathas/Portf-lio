@@ -1,3 +1,8 @@
+:root {
+  --color-destaque: #b800c9;
+  --color-destaque-sombra: #65026e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +16,19 @@ html {
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.6rem;
-  background-color: #393636ff;
+  background-color: black;
+  color: white;
+}
+
+.destaque {
+  color: var(--color-destaque);
 }
 
 .section-one {
-  background-color: rgb(73, 69, 69);
   height: auto;
   width: 100%;
   display: flex;
+  justify-content: space-around;
 }
 
 .text-section-one {
@@ -28,14 +38,15 @@ body {
   font-size: 3rem;
 }
 
-.text-titles {
+
+
+/* .text-titles {
   background: linear-gradient(45deg, #a97256ff, #eee3ddff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
 
 .color-desc {
-  color: #eee3ddff;
   font-size: 2.5rem;
 }
 
@@ -52,36 +63,32 @@ body {
 
 
 .img1-div {
-  object-fit: cover;
   width: 100%;
   max-height: 45rem;
   margin-bottom: 0;
-  margin-left: 100px;
-  box-shadow: #393636ff 1px 1px 10px 1px;
-  border-top-left-radius: 1.2rem;
-  border-bottom-left-radius: 1.2rem;
+  border-radius: 9px;
+  border: 1px solid var(--color-destaque);
+  box-shadow: var(--color-destaque) 1px 1px 10px 1px;
 }
 
 .section-two {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 
 .text-section-two {
-  background-color: rgb(73, 69, 69);
-  width: 50%;
+  margin-left: 270px;
+  margin-right: 270px;
   color: white;
   font-size: 3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 5rem;
   border-radius: 1.2rem;
   padding: 3rem;
+  border: 1px solid var(--color-destaque);
 }
 
 .container {
-  background-color: rgb(73, 69, 69);
   color: white;
   font-size: 3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -142,7 +149,7 @@ p {
 }
 
 .ordem-section-three:hover {
-  background: #a97256ff;
+  background: var(--color-destaque);
 }
 
 .font {
@@ -161,16 +168,21 @@ p {
 }
 
 .shadow {
-  box-shadow: #393636ff 2px 2px 2px 2px;
+  box-shadow: var(--color-destaque-sombra) 2px 2px 2px 2px;
 }
 
 /* Barra de navegação */
 .navbar-top{
-  background-color: #333;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
   overflow: hidden;
 }
 
 .navbar-top ul{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -178,6 +190,8 @@ p {
 }
 
 .navbar-top li {
+  border: 2px solid rgb(184, 0, 201);
+  border-radius: 12px;
   float: left;
 }
 
@@ -189,6 +203,11 @@ p {
   text-decoration: none;
 }
 
+.navbar-top li a{
+  transition: all 300ms ease-in-out;
+}
+
 .navbar-top li a:hover {
-  background-color: #111;
+  background-color: var(--color-destaque);
+  border-radius: 8px;
 }

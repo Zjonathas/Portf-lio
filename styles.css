@@ -199,7 +199,19 @@ p {
 }
 
 .font-size2 {
-  font-size: 3rem;
+  font-size: 2rem;
+}
+
+.section-projetos {
+  padding: 50px;
+  border-top: 1px solid var(--color-destaque);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.p-projetos {
+  max-width: 400px;
 }
 
 .container-projetos {
@@ -211,9 +223,20 @@ p {
 
 .container-projetos-items {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
+  gap: 200px;
   margin-top: 2rem;
+}
+
+.img-projetos {
+  object-fit: cover;
+  width: 300px;
+  height: 400px;
+  border-radius: 12px;
+  border: 1px solid var(--color-destaque);
+  box-shadow: var(--color-destaque) 1px 1px 5px 1px;
 }
 
 @media  screen and (max-width: 768px) {

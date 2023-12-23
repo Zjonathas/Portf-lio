@@ -18,6 +18,7 @@ body {
   font-size: 1.6rem;
   background-color: black;
   color: white;
+  padding: 10px 20px;
 }
 
 .destaque {
@@ -74,12 +75,11 @@ body {
 
 .section-two {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
 .text-section-two {
-  margin-left: 270px;
-  margin-right: 270px;
+  width: 80%;
   color: white;
   font-size: 3rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -211,4 +211,73 @@ p {
 .navbar-top li a:hover {
   background-color: var(--color-destaque);
   border-radius: 8px;
+}
+
+@media  screen and (max-width: 768px) {
+  .section-one {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-section-one {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    margin-top: 0;
+    font-size: 2rem;
+  }
+
+  .img1-div {
+    margin-left: 0;
+    margin-top: 2rem;
+    max-height: 25rem;
+  }
+
+  .text-section-two {
+    width: 100%;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
+
+  .text-section-three {
+    display: grid;
+    grid-template-columns: auto;
+    place-items: center;
+  
+  }
+
+  .topico0 {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  
+  .topico1 {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+  
+  .topico2 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+  
+  .topico3 {
+    grid-row-start: 4;
+    grid-column-start: 1;
+  }
+  
+  .topico4 {
+    grid-row-start: 5;
+    grid-column-start: 1;
+  }
+
+
+  .navbar-top {
+    margin-bottom: 1rem;
+  }
+
+  .navbar-top li a {
+    padding: 10px 12px;
+  }
+  
 }

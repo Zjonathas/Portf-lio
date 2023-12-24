@@ -1,3 +1,10 @@
-window.sr = scrollReveal({reset: true});
+/* Mostra o botão quando o usuário rolar a página para baixo */
+window.onscroll = function() {scrollFunction()};
 
-sr.reveal('.container', {duration: 1000});
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("backToTopBtn").style.display = "block";
+  } else {
+    document.getElementById("backToTopBtn").style.display = "none";
+  }
+}

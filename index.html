@@ -7,20 +7,23 @@
     <title>Portfólio Jonathas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
+
+    <button onclick="topFunction()" id="backToTopBtn" title="Voltar ao Início">Topo</button>
+
+    <!-- Conteúdo da página -->
     <nav class="navbar-top font-size2">
         <ul>
-            <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#home"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
         </ul>
     </nav>
-    <header class="section-one">
+    <header class="section-one" id="home">
         <div class="text-section-one">
             <h1 class="text-titles responsi">
                 Portfólio <span class="destaque">Jonathas</span> - Desenvolverdor <span class="destaque">Web Back -
@@ -41,7 +44,7 @@
     </header>
 
     <main class="main-content">
-        <section class="section-two">
+        <section class="section-two" id="sobre">
             <div class="text-section-two shadow">
                 <h2 class="text-titles">
                     Sobre <span class="destaque">mim</span>
@@ -58,7 +61,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="habilidades">
             <div class="text-section-three container">
                 <h2 class="text-titles topico0">
                     Habilidades <span class="destaque">técnicas</span>
@@ -102,7 +105,7 @@
             </div>
         </section>
 
-        <section class="section-projetos">
+        <section class="section-projetos" id="projetos">
             <div class="container-projetos">
                 <h2 class="font-size">Meus <span class="destaque">Projetos</span></h2>
             </div>
@@ -167,7 +170,7 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contato">
         <ul class="lista-footer">
             <li><a href="https://api.whatsapp.com/send?phone=5584997031322" target="_blank"><i
                         class="fa-brands fa-whatsapp"></i></a>
@@ -216,6 +219,23 @@
         ScrollReveal().reveal('.lista-footer', {
             duration: 1000
         });
+    </script>
+
+    <script>
+        // Função para rolar suavemente de volta ao topo
+        function topFunction() {
+            document.body.scrollTop = 0; // Para navegadores da web
+            document.documentElement.scrollTop = 0; // Para navegadores móveis
+        }
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+                document.getElementById("backToTopBtn").style.display = "none";
+            }
+        }
     </script>
 </body>
 

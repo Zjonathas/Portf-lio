@@ -372,11 +372,11 @@ p {
 
 
   .navbar-top {
-    margin-bottom: 1rem;
+    margin: 1rem;
   }
 
   .navbar-top li a {
-    padding: 10px 12px;
+    padding: 7px 9px;
   }
 
   .footer {

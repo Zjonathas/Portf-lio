@@ -7,10 +7,12 @@
     <title>Portfólio Jonathas</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="fontawesome-free-6.5.1-web/css/all.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
-    <nav class="navbar-top">
+    <nav class="navbar-top font-size2">
         <ul>
             <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
             <li><a href="#">Sobre</a></li>
@@ -111,18 +113,16 @@
                             <img src="imgs/Projeto-STEAM.jpg" alt="Projeto1" class="img-projetos">
                         </div>
                         <div class="text-projetos">
-                            <a href="http://zjonathas.github.io/STEAM" target="_blank">
-                                <h3 class="font-size2">STEAM</h3>
+                            <a href="http://zjonathas.github.io/STEAM" target="_blank" class="link-projetos">
+                                <h3 class="font-size2 center">STEAM</h3>
                             </a>
-                            <p class="font-size2 p-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Quisquam
-                                voluptatum
-                                quibusdam
-                                voluptates
-                                quia
-                                quos, quod, voluptate, quae voluptatibus quas doloribus quidem. Quisquam voluptatum
-                                quibusdam
-                                voluptates quia quos, quod, voluptate, quae voluptatibus quas doloribus quidem.</p>
+                            <p class="font-size2 p-projetos">Projeto desenvoldido em grupo para suprir a necessidade de
+                                um site que
+                                divulgasse o projeto <span class="destaque">STEAM </span>(Sala temática de abelha e
+                                mel), que é um projeto Integrador
+                                do Instituto Federal do Rio
+                                Grande do Norte - Campus Currais Novos - Curso Informárica.
+                            </p>
                         </div>
                     </div>
                     <div class="projetos">
@@ -131,19 +131,17 @@
                                 alt="Projeto2" class="img-projetos">
                         </div>
                         <div class="text-projetos">
-                            <a href="https://gregarious-iodized-band.glitch.me" target="_blank">
-                                <h3 class="font-size2">Projeto 2</h3>
+                            <a href="https://gregarious-iodized-band.glitch.me" target="_blank" class="link-projetos">
+                                <h3 class="font-size2 center">Galeria Grid</h3>
                             </a>
 
-                            <p class="font-size2 p-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Quisquam
-                                voluptatum
-                                quibusdam
-                                voluptates
-                                quia
-                                quos, quod, voluptate, quae voluptatibus quas doloribus quidem. Quisquam voluptatum
-                                quibusdam
-                                voluptates quia quos, quod, voluptate, quae voluptatibus quas doloribus quidem.</p>
+                            <p class="font-size2 p-projetos">Uma galeria feita com o tipo de <span
+                                    class="destaque">display grid,</span> para fixar os
+                                conhecimentos e se aprofundar neles. Além de ter sido usado grid, foi igualmente
+                                implementado alguns <span class="destaque">efeitos de transição e animação.</span> Com
+                                isso, foi possível fixar os
+                                conhecimentos.
+                            </p>
                         </div>
                     </div>
                     <div class="projetos">
@@ -152,25 +150,68 @@
                                 alt="Projeto2" class="img-projetos">
                         </div>
                         <div class="text-projetos">
-                            <a href="https://sugary-lake-trick.glitch.me" target="_blank">
-                                <h3 class="font-size2">Projeto 2</h3>
+                            <a href="https://sugary-lake-trick.glitch.me" target="_blank" class="link-projetos">
+                                <h3 class="font-size2 center">Galeria Flex</h3>
                             </a>
 
-                            <p class="font-size2 p-projetos">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Quisquam
-                                voluptatum
-                                quibusdam
-                                voluptates
-                                quia
-                                quos, quod, voluptate, quae voluptatibus quas doloribus quidem. Quisquam voluptatum
-                                quibusdam
-                                voluptates quia quos, quod, voluptate, quae voluptatibus quas doloribus quidem.</p>
+                            <p class="font-size2 p-projetos">
+                                Um projeto focado em <span class="destaque">flexbox</span> para fixar os conhecimentos
+                                desse tipo de display. Fazendo esse projeto, foi possível fixar os conhecimentos e se
+                                aprofundar neles.
+                                Ele também pode ser usado como um template para outros projetos, que necessitem de uma
+                                galeria de fotos.
+                            </p>
                         </div>
                     </div>
                 </div>
         </section>
     </main>
-
+    <footer class="footer position-fixed bottom-0">
+        <ul class="lista-footer">
+            <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+        </ul>
+    </footer>
+    <script>
+        ScrollReveal({
+            origin: 'top',
+            distance: '50px',
+            duration: 2000,
+            reset: true
+        })
+        ScrollReveal().reveal('.navbar-top', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.section-one', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.section-two', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.section-three', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.section-projetos', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.container', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.projetos', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.limite', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.footer', {
+            duration: 1000
+        });
+        ScrollReveal().reveal('.lista-footer', {
+            duration: 1000
+        });
+    </script>
 </body>
 
 </html>

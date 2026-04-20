@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-acid-green: #adff00;
+  --color-space-black: #09090b;
+  --color-panel-dark: #121214;
+  --color-high-viz-orange: #ff5e00;
+  
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* Brutalism Overrides */
+* {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+body {
+  @apply bg-space-black text-white font-sans antialiased overflow-x-hidden;
+}
+
+::selection {
+  @apply bg-acid-green text-space-black;
+}
+
+/* Cyber Glitch / Terminal Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-space-black;
+  border-left: 1px solid #1f1f22;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-acid-green;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white;
+}

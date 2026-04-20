@@ -32,9 +32,6 @@ function Navbar() {
                 href={item.href} 
                 className="group flex items-center gap-4 font-mono text-sm font-bold text-gray-400 hover:text-white transition-colors"
               >
-                <span className="text-[10px] text-gray-600 group-hover:text-acid-green transition-colors">
-                   [{idx}]
-                </span>
                 <span className="tracking-widest">{item.label}</span>
               </a>
             </li>

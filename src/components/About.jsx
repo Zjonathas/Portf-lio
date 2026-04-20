@@ -23,7 +23,7 @@ function About() {
           </p>
           
           <p>
-            Possuo inglês técnico e facilidade para comunicação e didática, habilidades que aplico também como criador de conteúdo focado em tecnologia no YouTube.
+            Possuo inglês técnico e facilidade para comunicação e didática.
           </p>
         </div>
 

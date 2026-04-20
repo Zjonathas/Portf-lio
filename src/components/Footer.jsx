@@ -35,9 +35,6 @@ function Footer() {
               rel="noreferrer"
               className="group p-6 md:p-10 flex flex-col items-center justify-center gap-4 bg-[#121214] hover:bg-acid-green transition-all duration-300"
             >
-              <span className="font-mono text-xs text-gray-500 group-hover:text-space-black transition-colors">
-                [RESOLVE_{link.label}]
-              </span>
               <span className="font-black text-xl text-white group-hover:text-space-black transition-colors">
                 {link.label}
               </span>

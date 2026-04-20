@@ -35,9 +35,6 @@ function Hero() {
         <a href="#projetos" className="group relative inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-space-black bg-acid-green border-2 border-acid-green hover:bg-transparent hover:text-acid-green transition-all duration-200">
           <span className="mr-2">&gt;_</span> VER_PROJETOS
         </a>
-        <a href="#" className="group relative inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-white border-2 border-white hover:bg-white hover:text-space-black transition-all duration-200">
-          BAIXAR_CURRICULO.pdf
-        </a>
       </div>
 
     </section>

@@ -36,7 +36,7 @@ build
 dist
 
 # Agent files (if needed to ignore specific agent artifacts but usually we keep .agent)
-# .agent/
+.agent/
 
 # Vite / React specific
 coverage

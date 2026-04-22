@@ -44,7 +44,7 @@ function Footer() {
 
         {/* Console info */}
         <div className="flex flex-col md:flex-row justify-between gap-4 font-mono text-[10px] text-gray-600 uppercase tracking-[0.2em]">
-          <p>© 2026 JONATHAS CARNEIRO // ALL RIGHTS RESERVED</p>
+          <p>© 2026 JONATHAS EMANUEL // ALL RIGHTS RESERVED</p>
           <p>BUILT_WITH: REACT + VITE + TAILWIND_V4</p>
           <p>ST_DEPLOYED: GITHUB_PAGES</p>
         </div>

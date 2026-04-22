@@ -14,8 +14,7 @@ function Hero() {
 
       {/* Título Massivo (Inter Black) */}
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight tracking-tighter mb-6">
-        Jonathas Emanuel <br/>
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-acid-green to-white">Medeiros Carneiro</span>
+        Jonathas Emanuel
       </h1>
 
       {/* Subtítulo Tecnológico */}

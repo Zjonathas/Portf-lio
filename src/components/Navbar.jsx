@@ -16,7 +16,7 @@ function Navbar() {
       {/* Brand / Logo */}
       <div className="mb-12">
         <h1 className="text-3xl font-black tracking-tighter text-white">
-          ZJ<span className="text-acid-green">.</span>C
+          ZJ<span className="text-acid-green">.</span>E
         </h1>
         <p className="font-mono text-[10px] text-gray-500 mt-1 tracking-[0.2em]">
           CORE_INTERFACE_V4.2

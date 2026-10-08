@@ -5,7 +5,7 @@ function Footer() {
     { label: "GITHUB", href: "https://github.com/Zjonathas" },
     { label: "LINKEDIN", href: "https://www.linkedin.com/in/zjonathas" },
     { label: "EMAIL", href: "mailto:zjonathas92244@gmail.com" },
-    { label: "WHATSAPP", href: "https://api.whatsapp.com/send?phone=5584997031322" },
+    { label: "WHATSAPP", href: "https://api.whatsapp.com/send?phone=553822008400" },
   ];
 
   return (

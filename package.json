@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/Zjonathas/Portf-lio/issues"
   },
-  "homepage": "https://github.com/Zjonathas/Portf-lio#readme",
+  "homepage": "https://zjonathas.com.br",
   "dependencies": {
     "react": "^19.2.5",
     "react-dom": "^19.2.5"

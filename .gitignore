@@ -35,8 +35,13 @@ dist-ssr
 build
 dist
 
-# Agent files (if needed to ignore specific agent artifacts but usually we keep .agent)
+# Agent files and skills (local only)
 .agent/
+.agents/
+AGENTS.md
+agents.md
+GEMINI.md
+gemini.md
 
 # Vite / React specific
 coverage

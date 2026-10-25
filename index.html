@@ -81,12 +81,27 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@400;500;600;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
     
+    <!-- Previne flash do tema inicial (FOUC) -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (saved === 'dark' || (!saved && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+
     <!-- ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script type="module" crossorigin src="/assets/index-BuiIMqXW.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CN8DELBP.css">
+    <script type="module" crossorigin src="/assets/index-Dy0KO6pg.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-fUpiVWXH.css">
   </head>
   <body>
     <div id="root"></div>

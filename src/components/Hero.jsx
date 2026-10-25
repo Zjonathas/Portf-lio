@@ -2,40 +2,29 @@ import React from 'react';
 
 function Hero() {
   return (
-    <section className="reveal-section flex flex-col justify-center min-h-[85vh]" id="home">
-      
-      {/* Label Monospaced */}
-      <div className="flex items-center gap-4 mb-8">
-        <div className="w-12 h-1 bg-acid-green"></div>
-        <span className="font-mono text-acid-green uppercase tracking-widest text-sm font-bold">
-          System Status: Online
-        </span>
+    <section className="pt-12 pb-20 md:pt-20 md:pb-32" id="home">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        {/* Kicker */}
+        <p className="text-accent font-bold text-sm uppercase tracking-widest mb-6">
+          Olá, meu nome é Jonathas
+        </p>
+
+        {/* Título editorial serifado */}
+        <h1 className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-text leading-[1.05] mb-10">
+          Eu construo software<br />e redes.
+        </h1>
+
+        {/* Bio curta, tipografia leve */}
+        <p className="text-xl sm:text-2xl text-text-offset leading-relaxed max-w-2xl">
+          Sou desenvolvedor de software e especialista em infraestrutura de redes na{' '}
+          <a href="#experiencia" className="link-underline text-text font-medium">Telecab</a>. 
+          Automação operacional, plataformas internas e engenharia NetDevOps — transformo 
+          problemas reais em{' '}
+          <a href="#projetos" className="link-underline text-text font-medium">soluções práticas</a>.
+        </p>
+
       </div>
-
-      {/* Título Massivo (Inter Black) */}
-      <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-tight tracking-tighter mb-6">
-        Jonathas Emanuel
-      </h1>
-
-      {/* Subtítulo Tecnológico */}
-      <h2 className="text-2xl md:text-4xl font-bold text-gray-300 mb-8 border-l-4 border-high-viz-orange pl-6">
-        Desenvolvedor de Software & <br/> 
-        Especialista em Infraestrutura
-      </h2>
-
-      {/* Texto de Apoio */}
-      <p className="max-w-2xl text-lg text-gray-400 mb-12 leading-relaxed">
-        Criando ferramentas de automação, sistemas internos e arquiteturas de rede escaláveis. 
-        Transformo gargalos operacionais em soluções eficientes através de código e engenharia de redes.
-      </p>
-
-      {/* Botões Brutalistas (Ghost / Filled sem raio) */}
-      <div className="flex flex-col sm:flex-row gap-6">
-        <a href="#projetos" className="group relative inline-flex items-center justify-center px-8 py-4 font-mono font-bold text-space-black bg-acid-green border-2 border-acid-green hover:bg-transparent hover:text-acid-green transition-all duration-200">
-          <span className="mr-2">&gt;_</span> VER_PROJETOS
-        </a>
-      </div>
-
     </section>
   );
 }

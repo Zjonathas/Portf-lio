@@ -1,61 +1,54 @@
 import React from 'react';
 
 function Skills() {
-  const coreSkills = [
+  const categories = [
     {
-      title: "Desenvolvimento (Foco Principal)",
-      tags: ["Python", "Django", "Flask", "Streamlit", "JavaScript", "PostgreSQL", "MySQL"],
-      color: "border-acid-green",
-      textColor: "text-acid-green"
+      title: "Desenvolvimento",
+      items: ["Python", "Django", "Flask", "Streamlit", "JavaScript", "React", "PostgreSQL", "MySQL"]
     },
     {
       title: "Infraestrutura & DevOps",
-      tags: ["Proxmox", "Docker", "Compose", "Linux", "VMs", "Containers"],
-      color: "border-high-viz-orange",
-      textColor: "text-high-viz-orange"
+      items: ["Linux", "Docker", "Docker Compose", "Proxmox VE", "Git", "CI/CD"]
     },
     {
       title: "Redes & ISP",
-      tags: ["MikroTik (RouterOS/WinBox)", "ONU", "FTTH", "VLANs", "WireGuard"],
-      color: "border-blue-400",
-      textColor: "text-blue-400"
+      items: ["MikroTik (RouterOS)", "FTTH/ONU", "VLANs", "WireGuard", "TCP/IP", "DNS"]
     },
     {
       title: "Observabilidade",
-      tags: ["Zabbix", "Grafana", "Pi-hole", "Tailscale"],
-      color: "border-gray-300",
-      textColor: "text-gray-300"
+      items: ["Zabbix", "Grafana", "Pi-hole", "Tailscale"]
     }
   ];
 
   return (
-    <section className="reveal-section flex flex-col" id="skills">
-      
-      {/* Section Header */}
-      <div className="flex items-end gap-6 mb-12 border-b-2 border-[#1f1f22] pb-6">
-        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight">Ferramentas & Tecnologias</h2>
-        <span className="font-mono text-acid-green font-bold text-xl mb-1">03</span>
-      </div>
+    <section className="py-16 md:py-24 border-t border-border" id="skills">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        <h2 className="font-serif text-4xl sm:text-5xl font-bold text-text mb-12">
+          Ferramentas & Tecnologias
+        </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {coreSkills.map((skill, idx) => (
-          <div key={idx} className={`p-6 border-2 ${skill.color} bg-[#121214] flex flex-col hover:bg-[${skill.color}]/5 transition-colors group`}>
-            <div className={`font-mono text-xs mb-4 ${skill.textColor}`}>
-              &gt; LOAD_MODULE: {skill.title.toUpperCase()}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+          {categories.map((cat, idx) => (
+            <div key={idx}>
+              <h3 className="text-sm font-bold text-accent uppercase tracking-widest mb-4">
+                {cat.title}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {cat.items.map((item, iIdx) => (
+                  <span 
+                    key={iIdx} 
+                    className="text-sm text-text bg-bg-offset px-3 py-1.5 rounded-md border border-border hover:border-accent/40 transition-colors"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </div>
-            <h3 className="text-2xl font-bold mb-6 text-white">{skill.title}</h3>
-            
-            <div className="flex flex-wrap gap-3 mt-auto">
-              {skill.tags.map((tag, tIdx) => (
-                <span key={tIdx} className={`px-3 py-1 text-sm font-bold bg-space-black border ${skill.color} text-gray-300 group-hover:text-white transition-colors`}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
+      </div>
     </section>
   );
 }

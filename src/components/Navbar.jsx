@@ -1,57 +1,51 @@
 import React from 'react';
+import fotoJonathas from '../assets/imgs/Fotominha.jpg';
+import ThemeToggle from './ThemeToggle';
 
 function Navbar() {
-  const navItems = [
-    { label: "00_HOME", href: "#home" },
-    { label: "01_SOBRE", href: "#sobre" },
-    { label: "02_EXP", href: "#experiencia" },
-    { label: "03_STACK", href: "#skills" },
-    { label: "04_PROJETOS", href: "#projetos" },
-    { label: "05_FORMAÇÃO", href: "#formacao" },
-    { label: "06_CONTATO", href: "#contato" },
+  const navLinks = [
+    { num: "01", label: "início", href: "#home" },
+    { num: "02", label: "sobre", href: "#sobre" },
+    { num: "03", label: "projetos", href: "#projetos" },
+    { num: "04", label: "contato", href: "#contato" },
   ];
 
   return (
-    <div className="flex flex-col h-full uppercase">
-      {/* Brand / Logo */}
-      <div className="mb-12">
-        <h1 className="text-3xl font-black tracking-tighter text-white">
-          ZJ<span className="text-acid-green">.</span>E
-        </h1>
-        <p className="font-mono text-[10px] text-gray-500 mt-1 tracking-[0.2em]">
-          CORE_INTERFACE_V4.2
-        </p>
-      </div>
+    <header className="w-full py-8 md:py-12">
+      <div className="max-w-4xl mx-auto px-6 flex items-center justify-between">
+        
+        {/* Avatar + Nome */}
+        <a href="#home" className="flex items-center gap-3 group">
+          <img 
+            src={fotoJonathas} 
+            alt="Jonathas Emanuel" 
+            className="w-10 h-10 rounded-full object-cover border-2 border-border" 
+          />
+          <span className="font-semibold text-text text-base group-hover:text-accent transition-colors">
+            Jonathas Emanuel
+          </span>
+        </a>
 
-      {/* Navigation Links */}
-      <nav className="flex-1">
-        <ul className="space-y-4">
-          {navItems.map((item, idx) => (
-            <li key={idx}>
-              <a 
-                href={item.href} 
-                className="group flex items-center gap-4 font-mono text-sm font-bold text-gray-400 hover:text-white transition-colors"
+        {/* Direita: Nav numerada + Alternador de Tema */}
+        <div className="flex items-center gap-6">
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <a
+                key={link.num}
+                href={link.href}
+                className="group flex items-baseline gap-1.5 text-sm text-text-offset hover:text-text transition-colors"
               >
-                <span className="tracking-widest">{item.label}</span>
+                <span className="text-accent font-bold text-xs">{link.num}</span>
+                <span>{link.label}</span>
               </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
+            ))}
+          </nav>
 
-      {/* Connection Status (Bottom) */}
-      <div className="hidden lg:block pt-12 border-t border-[#1f1f22]">
-        <div className="flex items-center gap-2 mb-2">
-          <div className="w-2 h-2 bg-acid-green animate-pulse"></div>
-          <span className="font-mono text-[10px] text-acid-green">UPLINK_STABLE</span>
+          <ThemeToggle />
         </div>
-        <p className="font-mono text-[9px] text-gray-600 leading-tight">
-          LATENCY: 12ms<br/>
-          PACKET_LOSS: 0%<br/>
-          SSH_AUTH: SUCCESS
-        </p>
+
       </div>
-    </div>
+    </header>
   );
 }
 

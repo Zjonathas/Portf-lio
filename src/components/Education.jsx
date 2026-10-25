@@ -1,56 +1,51 @@
 import React from 'react';
 
 function Education() {
-  const educationList = [
+  const items = [
     {
       degree: "Tecnologia em Sistemas para Internet",
-      institution: "IFRN",
+      school: "IFRN",
       period: "2026 – 2028",
       status: "Em andamento"
     },
     {
       degree: "Técnico Integrado em Informática",
-      institution: "IFRN",
+      school: "IFRN",
       period: "2021 – 2025",
       status: "Concluído"
     }
   ];
 
   return (
-    <section className="reveal-section flex flex-col pt-12" id="formacao">
-      
-      {/* Section Header */}
-      <div className="flex items-end gap-6 mb-12 border-b-2 border-[#1f1f22] pb-6">
-        <h2 className="text-4xl md:text-5xl font-black uppercase tracking-tight">Formação Acadêmica</h2>
-        <span className="font-mono text-acid-green font-bold text-xl mb-1">05</span>
-      </div>
+    <section className="py-16 md:py-24 border-t border-border" id="formacao">
+      <div className="max-w-4xl mx-auto px-6">
+        
+        <h2 className="font-serif text-4xl sm:text-5xl font-bold text-text mb-12">
+          Formação
+        </h2>
 
-      <div className="grid grid-cols-1 gap-6">
-        {educationList.map((item, idx) => (
-          <div key={idx} className="group relative bg-[#121214] border-2 border-[#1f1f22] p-8 flex flex-col md:flex-row md:items-center justify-between hover:border-acid-green transition-all duration-300">
-            <div>
-              <h3 className="text-2xl font-bold text-white group-hover:text-acid-green transition-colors mb-2">
-                {item.degree}
-              </h3>
-              <p className="text-gray-400 font-mono text-sm uppercase tracking-widest">
-                {item.institution}
-              </p>
+        <div className="space-y-8">
+          {items.map((item, idx) => (
+            <div key={idx} className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-8 border-b border-border last:border-b-0 last:pb-0">
+              <div>
+                <h3 className="text-lg font-semibold text-text">{item.degree}</h3>
+                <p className="text-text-offset text-sm">{item.school}</p>
+              </div>
+              <div className="flex items-center gap-3 shrink-0">
+                <span className="text-text-offset text-sm">{item.period}</span>
+                <span className={`text-xs font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${
+                  item.status === 'Em andamento' 
+                    ? 'text-accent bg-accent/10' 
+                    : 'text-text-offset bg-bg-offset'
+                }`}>
+                  {item.status}
+                </span>
+              </div>
             </div>
-            <div className="mt-4 md:mt-0 text-right">
-              <span className="block font-mono text-acid-green font-bold mb-1">
-                {item.period}
-              </span>
-              <span className="text-xs uppercase font-bold px-2 py-1 bg-space-black border border-[#1f1f22] text-gray-500 group-hover:text-white transition-colors">
-                {item.status}
-              </span>
-            </div>
-            
-            {/* Corner Decorator */}
-            <div className="absolute top-0 right-0 w-2 h-2 bg-acid-green opacity-0 group-hover:opacity-100 transition-opacity"></div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
+      </div>
     </section>
   );
 }
